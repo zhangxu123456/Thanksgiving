@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点点橙-感恩节活动</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+</head>
+<body class="share">
+<div class="page6">
+    <div class="babe-thinks">
+        <img class="babe_img" src="./images/babe_thanks.jpg" alt="">
+    </div>
+    <div class="submit_in">
+        <p class="sub_right sub">长按图片保存至手机</p>
+        <p class="sub_left sub">重新填写</p>
+
+    </div>
+</div>
+<script>
+    /*正则获取传过来参数*/
+
+
+    var shengURL=localStorage.dataURL;
+
+        console.log(shengURL);
+        if(shengURL){
+//            <img src="data:image/png;base64,这里放字符"/>
+            var pingjie=shengURL;
+            $('.babe_img').attr('src',pingjie);
+            console.log(pingjie)
+        }
+
+
+
+    $('.sub_left').click(function () {
+        location.href="./index.html?pageurl="+'fullpage123'
+    })
+</script>
+</body>
+</html>
